@@ -29,7 +29,7 @@ int create_job(const char *dir) {
 
 cleanup:
   fclose(jobfile);
-
+  remove(jobfile);
   free(jobfname);
   jobfname = NULL;
 
